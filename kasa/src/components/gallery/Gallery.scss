@@ -1,0 +1,17 @@
+@import "../../styles/globals";
+@import "../../styles/variables";
+@import "../../styles/colors";
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+    background-color: $tertiaryColor;
+    width: 100%;
+    max-width: $maxMainSize;
+    height: 845px;
+    @include page-centering;
+    margin-bottom: 50px;
+    border-radius: 25px;
+  }

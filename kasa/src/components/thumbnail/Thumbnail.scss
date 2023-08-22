@@ -1,0 +1,27 @@
+@import "../../styles/globals";
+@import "../../styles/variables";
+@import "../../styles/colors";
+
+.thumb {
+  position: relative;
+  width: 27.42%;
+  max-width: 340px;
+  height: 41.01%;
+  max-height: 340px;
+  /* margin-bottom: 5%; */
+  border-radius: 10px;
+}
+.thumb__img {
+  @include image-size;
+}
+.thumb__text {
+  @include thumbnailText;
+  position: absolute;
+  left: 5.88%;
+  top: 80%;
+  width: 24.19%;
+  max-width: 300px;
+  height: 15.29%;
+  max-height: 52px;
+  margin: 0;
+}

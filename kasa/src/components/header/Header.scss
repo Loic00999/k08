@@ -1,0 +1,43 @@
+@import "../../styles/globals";
+@import "../../styles/variables";
+@import "../../styles/colors";
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 86.11%;
+  max-width: $maxMainSize;
+  height: 68px;
+  @include page-centering;
+  margin-top: 47px;
+  margin-bottom: 48px;
+}
+.header-container__logo {
+  width: 16.94%;
+  max-width: 210px;
+  max-height: 68px;
+}
+.header-container__logo--img {
+  @include image-size;
+}
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 24.92%;
+  max-width: 309px;
+  height: 34px;
+  gap: 18.45%;
+}
+.navbar p:nth-child(1) {
+  width: 136px;
+}
+.navbar p:nth-child(2){
+  width: 116px;
+}
+.navbar__link {
+  @include linkFont--desktop;
+}

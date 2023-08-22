@@ -1,0 +1,73 @@
+$primaryFont: Montserrat; // Font du design du site
+
+$maxSiteSize: 1440px; // Taille maximum de la page du site
+$maxMainSize: 1240px; // Taille maximum des sections de page du site
+
+@mixin globalsFont { // 
+  font-family: $primaryFont;
+  font-weight: 500;
+  letter-spacing: 0em;
+}
+
+@mixin linkFont--desktop {
+  @include globalsFont;
+  color: $primaryColor;
+  font-size: 24px;
+  line-height: 34px;
+  text-align: right;
+}
+@mixin linkFont--mobile {
+  @include globalsFont;
+  color: $primaryColor;
+  font-size: 12px;
+  line-height: 17px;
+  text-align: right;
+}
+
+@mixin bannerText--desktop {
+  @include globalsFont;
+  color: $secondaryColor;
+  font-size: 48px;
+  line-height: 68px;
+  text-align: left;
+}
+@mixin bannerText--mobile {
+  @include globalsFont;
+  color: $secondaryColor;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: left;
+}
+
+@mixin thumbnailText {
+  @include globalsFont;
+  color: $secondaryColor;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: left;
+}
+
+@mixin footerText--desktop {
+  @include globalsFont;
+  color: $secondaryColor;
+  font-size: 24px;
+  line-height: 34px;
+  text-align: center;
+}
+@mixin footerText--mobile {
+  @include globalsFont;
+  color: $secondaryColor;
+  font-size: 12px;
+  line-height: 17px;
+  text-align: center;
+}
+
+@mixin image-size { // Taille des fichiers images dans leur parent
+  width: 100%;
+  height: 100%;
+}
+
+@mixin page-centering { // Centrage de la page
+  margin-left: auto;
+  margin-right: auto;
+}

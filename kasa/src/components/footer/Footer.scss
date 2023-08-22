@@ -1,0 +1,34 @@
+@import "../../styles/globals";
+@import "../../styles/variables";
+@import "../../styles/colors";
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $quaternaryColor;
+    width: 100%;
+    height: 209px;
+  }
+  .footer__div-logo {
+    width: 122px;
+    height: 39.4px;
+  }
+  .footer__logo {
+    @include image-size;
+  }
+  .footer__div-text {
+    display: flex;
+    justify-content: center;
+    width: 35.63%;
+    max-width: 513px;
+    height: 46px;
+  }
+  .footer__text {
+    @include footerText--desktop;
+    white-space: nowrap;
+    text-align: center;
+    /* width: 134px;
+    height: 46px; */
+  }

@@ -1,0 +1,9 @@
+@import "./styles/reset";
+@import "./styles/globals";
+@import "./styles/variables";
+@import "./styles/colors";
+
+.body-container {
+  max-width: $maxSiteSize;
+  @include page-centering;
+}
