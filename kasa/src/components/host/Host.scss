@@ -1,0 +1,31 @@
+@import "../../styles/globals";
+@import "../../styles/variables";
+@import "../../styles/colors";
+
+.housing-profile__host {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 10.4375rem;
+  height: 4rem;
+  flex-shrink: 0;
+}
+.housing-profile__host--name {
+  display: flex;
+  align-items: center;
+  width: 5.8125rem;
+  height: 3.25rem;
+}
+.housing-profile__host--name h3 {
+  @include host--text;
+}
+.housing-profile__host--picture {
+  width: 4rem;
+  height: 4rem;
+}
+.housing-profile__host--picture img {
+  border-radius: 50%;
+  object-fit: cover;
+  @include image--size;  
+}

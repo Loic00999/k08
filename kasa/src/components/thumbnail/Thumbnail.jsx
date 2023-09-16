@@ -1,11 +1,13 @@
 import "./Thumbnail.scss";
-import thumbnailDefault from "../../assets/thumbnail_default_01.svg";
+import { Link } from "react-router-dom";
 
-export default function Thumbnail() {
+export default function Thumbnail({id, title, cover, tags}) {
   return (
-    <div className="thumb">
-      <img className="thumb__img" src={thumbnailDefault} alt="thumbnail" />
-      <p className="thumb__text">Titre de la location</p>
-    </div>
+    <Link to={`/Housing/${id}`}>
+      <div className="thumb">
+        <img className="thumb__img" src={cover} alt={tags} />
+        <p className="thumb__text">{title}</p>
+      </div>
+    </Link>
   );
 }

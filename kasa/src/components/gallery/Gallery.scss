@@ -3,15 +3,15 @@
 @import "../../styles/colors";
 
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-content: space-around;
-    background-color: $tertiaryColor;
-    width: 100%;
-    max-width: $maxMainSize;
-    height: 845px;
-    @include page-centering;
-    margin-bottom: 50px;
-    border-radius: 25px;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: space-around;
+  background-color: $tertiaryColor;
+  width: 100%;
+  max-width: $maxMainSize;
+  @include page--centering;
+  margin-bottom: 3.12rem;
+  padding-top: min(6.76%, 3.5rem);
+  border-radius: 1.5625rem;
+}

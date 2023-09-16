@@ -5,5 +5,5 @@
 
 .body-container {
   max-width: $maxSiteSize;
-  @include page-centering;
+  @include page--centering;
 }

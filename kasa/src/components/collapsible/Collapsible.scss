@@ -1,0 +1,83 @@
+@import "../../styles/globals";
+@import "../../styles/variables";
+@import "../../styles/colors";
+
+.collapsible__container--about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  width: $maxMainSize;
+  @include page--centering;
+}
+.collapsible--about {
+  display: flex;
+  flex-direction: column;
+  width: 82.5%;
+  margin-bottom: 1.88rem;
+}
+.collapsible__container--housing {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 3.12rem;
+}
+.collapsible--housing {
+  display: flex;
+  flex-direction: column;
+  width: 46.94%;
+  margin-bottom: 1.88rem;
+}
+.collapsible__title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0.3125rem;
+  background-color: $primaryColor;
+  width: 100%;
+  height: 3.25rem;
+}
+.collapsible__vector {
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+  margin-right: 1.25rem;
+}
+.collapsible__vector--open {
+  transition: transform 0.5s ease-in-out;
+  transform: rotate(-180deg);
+  @include image--size;
+}
+.collapsible__vector--close {
+  transition: transform 0.5s ease-in-out;
+  transform: rotate(0deg);
+  @include image--size;
+}
+.collapsible__title--paragraph {
+  @include collapsible--about--title;
+  margin-left: 0.94rem;
+  transition: all 0.5s ease-in-out;
+}
+.collapsible__content {
+  background-color: $tertiaryColor;
+  width: 100%;
+  border-radius: 0.3125rem;
+}
+.collapsible__content--paragraph {
+  @include collapsible--about--content;
+  margin: 1.25rem;
+  overflow: hidden;
+  white-space: wrap;
+}
+.collapsible__content li {
+  @include liste-text;
+  margin-left: 1.25rem;
+}
+.collapsible__content li:first-of-type {
+  margin-top: 1.25rem;
+}
+.collapsible__content li:last-of-type {
+  margin-bottom: 1.25rem;
+}

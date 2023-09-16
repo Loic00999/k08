@@ -8,27 +8,25 @@
     justify-content: center;
     align-items: center;
     background-color: $quaternaryColor;
-    width: 100%;
-    height: 209px;
+    width: $maxSiteSize;
+    @include page--centering;
+    height: 13.0625rem;
   }
   .footer__div-logo {
-    width: 122px;
-    height: 39.4px;
+    width: 7.625rem;
+    height: 2.46525rem;
+    flex-shrink: 0;
   }
   .footer__logo {
-    @include image-size;
+    @include image--size;
   }
   .footer__div-text {
     display: flex;
     justify-content: center;
     width: 35.63%;
-    max-width: 513px;
-    height: 46px;
+    max-width: 32.0625rem;
+    height: 2.875rem;
   }
   .footer__text {
     @include footerText--desktop;
-    white-space: nowrap;
-    text-align: center;
-    /* width: 134px;
-    height: 46px; */
   }

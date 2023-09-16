@@ -1,0 +1,37 @@
+@import "../styles/globals";
+@import "../styles/variables";
+@import "../styles/colors";
+
+.housing-container {
+  @include page--centering;
+  width: $maxMainSize;
+  display: flex;
+  flex-direction: column;
+}
+.label {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+.label__rating {
+  display: flex;
+  justify-content: space-around;
+  width: 12.25rem;
+  height: 2.25rem;
+  flex-shrink: 0;
+}
+.label__rating img {
+  @include image--size;
+}
+.housing-profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}

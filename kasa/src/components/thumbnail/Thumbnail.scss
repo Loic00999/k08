@@ -2,26 +2,26 @@
 @import "../../styles/variables";
 @import "../../styles/colors";
 
+a {
+  width: 27.42%;
+  aspect-ratio: 1/1;
+  margin-bottom: min(6.76%, 3.5rem);
+}
 .thumb {
   position: relative;
-  width: 27.42%;
-  max-width: 340px;
-  height: 41.01%;
-  max-height: 340px;
-  /* margin-bottom: 5%; */
-  border-radius: 10px;
+  @include image--size;
+  flex-shrink: 0;
 }
 .thumb__img {
-  @include image-size;
+  @include image--size;
+  border-radius: 0.625rem;
+  object-fit: cover;
 }
 .thumb__text {
-  @include thumbnailText;
+  @include thumbnail--text;
   position: absolute;
   left: 5.88%;
-  top: 80%;
-  width: 24.19%;
-  max-width: 300px;
-  height: 15.29%;
-  max-height: 52px;
+  bottom: 5.88%;
+  width: max(24.19%, 88.24%);
   margin: 0;
 }
