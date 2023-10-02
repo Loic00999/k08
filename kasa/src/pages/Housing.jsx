@@ -16,13 +16,15 @@ export default function Housing() {
   return (
     <div className="housing-container">
       <Carousel pictures={house.pictures} title={house.title} />
-      <div className="housing-profile">
-        <Infos key={house.id} title={house.title} location={house.location} />
-        <Host name={house.host.name} picture={house.host.picture} />
-      </div>
-      <div className="label">
-        <Tags tags={house.tags} />
-        <Rating ratingHouse={house.rating} />
+      <div className="housing-container-profile">
+        <div className="housing-profile">
+          <Infos key={house.id} title={house.title} location={house.location} />
+          <Tags tags={house.tags} />
+        </div>
+        <div className="label">
+          <Host name={house.host.name} picture={house.host.picture} />
+          <Rating ratingHouse={house.rating} />
+        </div>
       </div>
       <div className="collapsible__container--housing">
         <Collapsible title={"Description"} className={"collapsible--housing"} content={house.description}/>

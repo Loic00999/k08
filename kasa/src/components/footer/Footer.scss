@@ -1,17 +1,16 @@
 @import "../../styles/globals";
-@import "../../styles/variables";
 @import "../../styles/colors";
 
 .footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: $quaternaryColor;
-    width: $maxSiteSize;
-    @include page--centering;
-    height: 13.0625rem;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $quaternaryColor;
+  width: 100%;
+  max-width: $maxSiteSize;
+  @include page--centering;
+  height: 13.0625rem;
   .footer__div-logo {
     width: 7.625rem;
     height: 2.46525rem;
@@ -23,10 +22,17 @@
   .footer__div-text {
     display: flex;
     justify-content: center;
-    width: 35.63%;
-    max-width: 32.0625rem;
-    height: 2.875rem;
+    @media (max-width: 576px) {
+      width: 7.625rem;
+    }
+    .footer__text {
+      @include footerText--desktop;
+      @media (max-width: 576px) {
+        @include footerText--mobile;
+        text-align: center;
+        white-space: pre-wrap;
+        overflow: hidden;
+      }
+    }
   }
-  .footer__text {
-    @include footerText--desktop;
-  }
+}

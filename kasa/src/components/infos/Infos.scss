@@ -3,32 +3,37 @@
 @import "../../styles/colors";
 
 .housing-profile__infos {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1.25rem;
-    min-width: 39.688rem;
-    height: 4.813rem;
-  }
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  @media (max-width: 576px) {
+    margin-bottom: 0.62rem;
+      }
   .housing-profile__infos--title {
-    min-width: 39.688rem;
-    height: 3.188rem;
-  }
-  .housing-profile__infos--title h1 {
-    @include globalsFont;
-    font-size: 2.25rem;
-    line-height: 3.188rem;
-    text-align: left;
-    color: $primaryColor;
+    & h1 {
+      margin: 0;
+      @include globalsFont;
+      font-size: 2.25rem;
+      text-align: left;
+      color: $primaryColor;
+      @media (max-width: 576px) {
+        font-size: 1.125rem;
+        margin: 0;
+          }
+    }
   }
   .housing-profile__infos--location {
-    width: 11rem;
-    height: 1.625rem;
+    & h2 {
+      margin: 0;
+      @include globalsFont;
+      font-size: 1.125rem;
+      text-align: left;
+      color: $primaryColor;
+      white-space: nowrap;
+      @media (max-width: 576px) {
+        font-size: 0.875rem;
+          }
+    }
   }
-  .housing-profile__infos--location h2 {
-    @include globalsFont;
-    font-size: 1.125rem;
-    line-height: 1.625rem;
-    text-align: left;
-    color: $primaryColor;
-    white-space: nowrap;
-  }
+}

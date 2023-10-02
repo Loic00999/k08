@@ -7,25 +7,39 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 10.4375rem;
+  gap: 1rem;
   height: 4rem;
-  flex-shrink: 0;
-}
-.housing-profile__host--name {
-  display: flex;
-  align-items: center;
-  width: 5.8125rem;
-  height: 3.25rem;
-}
-.housing-profile__host--name h3 {
-  @include host--text;
-}
-.housing-profile__host--picture {
-  width: 4rem;
-  height: 4rem;
-}
-.housing-profile__host--picture img {
-  border-radius: 50%;
-  object-fit: cover;
-  @include image--size;  
+  @media (max-width: 576px) {
+    gap: 0.5rem;
+  }
+  .housing-profile__host--name {
+    display: flex;
+    align-items: center;
+    width: 5.8125rem;
+    height: 3.25rem;
+    @media (max-width: 576px) {
+      width: 4.8125rem;
+      height: 2.0625rem;
+    }
+    & h3 {
+      @include host--text;
+      @media (max-width: 576px) {
+        @include host--text--mobile;
+        margin: 0;
+      }
+    }
+  }
+  .housing-profile__host--picture {
+    width: 4rem;
+    height: 4rem;
+    @media (max-width: 576px) {
+      width: 2rem;
+      height: 2rem;
+    }
+    & img {
+      border-radius: 50%;
+      object-fit: cover;
+      @include image--size;
+    }
+  }
 }

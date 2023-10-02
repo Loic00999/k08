@@ -2,7 +2,6 @@
   font-family: Montserrat;
   src: url(../assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
 }
-
 $primaryFont: "Montserrat"; // Font du design du site
 
 $maxSiteSize: 1440px; // Taille maximum de la page du site
@@ -19,8 +18,6 @@ text-decoration: none;
 @mixin globalsFont { // 
   font-family: $primaryFont;
   font-weight: 500;
-  line-height: 142.6%;
-  letter-spacing: 0em;
 }
 
 @mixin linkFont--desktop {
@@ -46,7 +43,6 @@ text-decoration: none;
   @include globalsFont;
   color: $secondaryColor;
   font-size: 1.5rem;
-  line-height: 100%;
   text-align: left;
 }
 
@@ -78,10 +74,24 @@ text-decoration: none;
   text-align: center;
 }
 
+@mixin tag--text {
+  @include globalsFont;
+  color: $secondaryColor;
+  font-size: 0.625rem;
+  text-align: center;
+}
+
 @mixin host--text {
   @include globalsFont;
   color: $primaryColor;
   font-size: 1.125rem;
+  text-align: right;
+}
+
+@mixin host--text--mobile {
+  @include globalsFont;
+  color: $primaryColor;
+  font-size: 0.75rem;
   text-align: right;
 }
 
@@ -91,11 +101,24 @@ text-decoration: none;
   font-size: 1.5rem;
   text-align: left;
 }
+@mixin collapsible--about--title--mobile {
+  @include globalsFont;
+  color: $secondaryColor;
+  font-size: 0.8125rem;
+  text-align: left;
+}
 
 @mixin collapsible--about--content {
   @include globalsFont;
   color: $primaryColor;
   font-size: 1.125rem;
+  text-align: left;
+}
+
+@mixin collapsible--about--content--mobile {
+  @include globalsFont;
+  color: $primaryColor;
+  font-size: 0.75rem;
   text-align: left;
 }
 
@@ -109,12 +132,63 @@ text-decoration: none;
   margin-right: auto;
 }
 
-@mixin liste-text {
+@mixin liste--text {
   font-family: $primaryFont;
   color: $primaryColor;
   font-size: 1.125rem;
   font-weight: 400;
-  line-height: 142.6%;
-  letter-spacing: 0em;
   text-align: left;  
+}
+
+@mixin liste--text--mobile {
+  font-family: $primaryFont;
+  color: $primaryColor;
+  font-size: 0.75rem;
+  font-weight: 400;
+  text-align: left;  
+}
+
+@mixin not-found--title {
+  font-family: $primaryFont;
+  color: $primaryColor;
+  font-size: 18rem;
+  font-weight: 700;
+  text-align: center;  
+}
+@mixin not-found--title--mobile {
+  font-family: $primaryFont;
+  color: $primaryColor;
+  font-size: 6rem;
+  font-weight: 700;
+  text-align: center;  
+}
+
+@mixin not-found--text {
+  font-family: $primaryFont;
+  color: $primaryColor;
+  font-size: 2.25rem;
+  font-weight: 400;
+  text-align: center;  
+}
+@mixin not-found--text--mobile {
+  font-family: $primaryFont;
+  color: $primaryColor;
+  font-size: 1.125rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+@mixin not-found--back-to-home {
+  font-family: $primaryFont;
+  color: $primaryColor;
+  font-size: 1.125rem;
+  font-weight: 400;
+  text-align: center;
+}
+@mixin not-found--back-to-home--mobile {
+  font-family: $primaryFont;
+  color: $primaryColor;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: center;  
 }

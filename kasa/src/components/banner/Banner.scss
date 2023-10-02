@@ -1,5 +1,4 @@
 @import "../../styles/globals";
-@import "../../styles/variables";
 @import "../../styles/colors";
 
 .banner {
@@ -8,23 +7,47 @@
   max-width: $maxMainSize;
   @include page--centering;
   margin-bottom: 2.688rem;
-}
-.banner__img {
-  width: 100%;
-  height: 20.37%;
-  max-height: 13.938rem;
-  border-radius: 1.563rem;
-  object-fit: cover;
-  filter: brightness(70%);
-}
-.banner__div-text {
-  position: absolute;
-  left: 21.57%;
-  bottom: 60.76%;
-  width: 56.85%;
-  max-width: 705px;
-  height: 4.25rem;
-}
-.banner__text {
-  @include bannerText--desktop;
+  @media (max-width: 576px) {
+    margin-bottom: 1.38rem;
+  }
+  .banner__container{
+    @media (max-width: 576px) {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .banner__container__img {
+    width: 100%;
+    max-height: 13.938rem;
+    border-radius: 1.5625rem;
+    object-fit: cover;
+    filter: brightness(70%);
+    @media (max-width: 576px) {
+      width: 89.33%;
+      max-height: 6.9375rem;
+      border-radius: 0.625rem;
+    }
+  }
+  .banner__div-text {
+    position: absolute;
+    left: 21.57%;
+    bottom: 60.76%;
+    width: 56.85%;
+    max-width: 44.063rem;
+    height: 4.25rem;
+    @media (max-width: 576px) {
+      left: 9.6%;
+      bottom: 50.45%;
+      width: 64.78%;
+      max-width: 13.5625rem;
+      height: 3rem;
+    }
+    .banner__text {
+      @include bannerText--desktop;
+      @media (max-width: 576px) {
+        @include bannerText--mobile;
+      }
+    }
+  }
 }

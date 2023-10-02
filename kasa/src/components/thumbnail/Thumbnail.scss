@@ -1,27 +1,35 @@
 @import "../../styles/globals";
-@import "../../styles/variables";
 @import "../../styles/colors";
 
-a {
+.thumb__link {
   width: 27.42%;
   aspect-ratio: 1/1;
   margin-bottom: min(6.76%, 3.5rem);
-}
-.thumb {
-  position: relative;
-  @include image--size;
-  flex-shrink: 0;
-}
-.thumb__img {
-  @include image--size;
-  border-radius: 0.625rem;
-  object-fit: cover;
-}
-.thumb__text {
-  @include thumbnail--text;
-  position: absolute;
-  left: 5.88%;
-  bottom: 5.88%;
-  width: max(24.19%, 88.24%);
-  margin: 0;
+  @media (max-width: 576px) {
+    width: 89.33%;
+    aspect-ratio: 1/0.6863;
+    margin-bottom: 1.25rem;
+  }
+  .thumb {
+    position: relative;
+    @include image--size;
+    flex-shrink: 0;
+    .thumb__img {
+      @include image--size;
+      border-radius: 0.625rem;
+      object-fit: cover;
+    }
+    .thumb__text {
+      @include thumbnail--text;
+      position: absolute;
+      left: 5.88%;
+      bottom: 5.88%;
+      width: max(24.19%, 88.24%);
+      margin: 0;
+      @media (max-width: 576px) {
+        left: 5.8%;
+        bottom: 5.88%;        
+      }
+    }
+  }
 }

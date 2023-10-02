@@ -5,17 +5,25 @@
 .label__tags {
   display: flex;
   flex-direction: row;
-}
-.label__tags--content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 6.1875rem;
-  height: 1.5625rem;
-  border-radius: 0.625rem;
-  margin-right: 0.62rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  background-color: $primaryColor;
-  @include tag--text;
+  @media (max-width: 576px) {
+    flex-wrap: wrap;    
+  }
+  .label__tags--content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 6.1875rem;
+    height: 1.5625rem;
+    border-radius: 0.625rem;
+    margin-right: 0.62rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    background-color: $primaryColor;
+    @include tag--text;
+    @media (max-width: 576px) {
+      min-width: 5.25rem;
+      height: 1.125rem;
+      margin-bottom: 0.62rem;
+    }
+  }
 }
